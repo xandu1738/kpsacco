@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% include 'navbar.html' %} 
 {% load crispy_forms_tags %}
 <html>
   <head>
@@ -15,22 +14,19 @@
     />
   </head>
   <body>
-   
     {% block content %}
     <div class="container">
       <div class="col d-flex justify-content-center">
         <div class="card p-5 m-4">
+          <h3>{% block fheader %}Form{% endblock fheader %}</h3>
           <form method="POST" action="">
-            {% csrf_token %} 
-            {{form|crispy}}
+            {% csrf_token %} {{form|crispy}}
             <button type="submit" class="mt-4 btn btn-primary">Continue</button>
           </form>
         </div>
       </div>
     </div>
     {% endblock content %}
-
-    
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

@@ -21,6 +21,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'members.apps.MembersConfig',
+    'authent.apps.AuthentConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
